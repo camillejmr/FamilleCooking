@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2 class="title">Ajouter un ingrédient</h2>
+    <div class="formContainer">
+        {{ form_start(ingredientform) }}
+
+        {{ form_widget(ingredientform) }}
+        <button>Ajouter l'ingrédient</button></div>
+    {{ form_end(ingredientform) }}
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | Ajouter un ingrédient
+{% endblock %}

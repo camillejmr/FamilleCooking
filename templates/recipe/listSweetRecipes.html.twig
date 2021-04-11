@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recettes sucrées | {{ parent() }}{% endblock %}
+
+{% block body %}
+<section>
+    {% for recipe in sweetRecipes %}
+     <article><h3>{{ recipe.title }}</h3>
+     <p>{{ recipe.description }}</p></article>{% endfor %}
+</section>{% endblock %}

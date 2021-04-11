@@ -1,0 +1,36 @@
+<nav class="navbar">
+    <div class="logo">
+        <a href="{{ path('main_home') }}">
+            <img id="logo" src="{{ asset('img/famillecooking.png') }}" alt="Demonstration"></a>
+    </div>
+    <div class="dropdown">
+        <ul>
+
+            <li class="deroulant"><a class="survol"  data-text="RECETTES ▼" href="#">RECETTES
+                    ▼
+                </a>
+                <ul class="sous">
+
+                    <li><a class="survol"data-text="RECETTES SUCREES"
+                           href="{{ path('recipes_listSweetRecipes') }}">RECETTES SUCREES
+                        </a></li>
+                    <li><a class="survol" data-text="RECETTES SALEES"
+                           href="{{ path('recipes_listSavoryRecipes') }}">RECETTES SALEES
+                        </a></li>
+                </ul>
+            </li>
+            <li><a class="survol" data-text="A PROPOS" href="{{ path('main_apropos') }}">A PROPOS</a></li>
+            <li><a class="survol" data-text="CONTACT" href="#">CONTACT</a></li>
+
+
+            {% if app.user %}
+                <li><a class="survol" data-text="SE DECONNECTER" href="{{ path('app_logout') }}">SE DECONNECTER</a></li>
+            {% else %}
+                <li><a class="survol" data-text="SE CONNECTER" href="{{ path('app_login') }}">SE CONNECTER</a></li>
+
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+
