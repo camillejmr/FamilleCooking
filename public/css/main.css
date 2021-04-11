@@ -190,23 +190,35 @@ a:hover::before {
     color: #FEC0AA;
 }
 
+#imgfruits {
+    height:200px;
+    margin-left: 100px; margin-right: auto;
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     text-align: center;
-    /*top:270%;*/
-    margin-bottom: 2%;
-    padding-top: 2%;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*margin-bottom: 2%;*/
+    /*margin-top: 180px;*/
+    /*padding-top: 2%;*/
 }
 
 nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
-    z-index:99999;
-    display:inherit;
-    position:absolute;
-    margin-top:20px;
-    margin-left:-144px;
+    z-index: 99999;
+    display: inherit;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -144px;
 }
-nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
 
+nav ul li ul {
+    display: none;
+}
 
+/* Rend le menu déroulant caché par défaut */
+
+main, footer {
+    display: block
+}

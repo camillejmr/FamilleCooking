@@ -1,5 +1,10 @@
 {% extends'/base.html.twig' %}
 
 {% block title %}{{ parent() }} | Accueil{% endblock %}
-{% block body %}<h1>page Home</h1>
+{% block body %}<h2 class="title">En cuisine les gourmands !</h2>
+    <img id="imgfruits" src="{{ asset('img/Photos/freshFruits.jpg') }}" alt="Fruits">
+    <div>
+        <input type="search" placeholder="Ingrédient,...">
+        <button>Rechercher la meilleure recette</button>
+    </div>
 {% endblock %}
